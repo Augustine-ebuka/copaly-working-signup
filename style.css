@@ -1,0 +1,528 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* HEADER SECTION CSS for mobile view */ 
+
+.nav-head{
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: #497de6;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+.logo{
+    margin-left: 20px;
+}
+.bars{
+    margin-right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+
+
+.accordion .mobile-menu.hide {
+    display:block ;
+    transition: all 0.5s ease-in-out;
+}
+.accordion .mobile-menu{
+    display: none;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+.accordion .mobile-menu .question{
+    padding-bottom: 10px;
+    cursor: pointer;
+    padding-top: 15px;
+    padding-left: 20px;
+    border-bottom: 1px solid #ccc;
+
+}
+.accordion .mobile-menu .question:hover{
+    color: #003399;
+    transition: all 0.3s ease-in-out;
+}
+
+#elementwithchildren::after{
+    content: '+';
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+.accordion .mobile-menu .answer{
+    padding-left: 20px;
+    width: 100%;
+    position: relative;
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+ 
+}
+.accordion .mobile-menu .answer ul li{
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 2px;
+}
+.accordion .mobile-menu .answer ul li a{
+    list-style: none;
+    padding-bottom: 10px;
+    color: #003399;
+}
+.accordion .mobile-menu a{
+    list-style: none;
+    padding-bottom: 10px;
+    color:#333333;
+}
+.accordion .mobile-menu a:hover{
+    color: #003399;
+}
+
+
+/************after adding javascript link******************/
+.accordion .mobile-menu.active .answer{
+    height: 80px;
+}
+.accordion .mobile-menut.active .question{
+    transition: .3s;
+}
+
+
+.accordion .mobile-menu.active #elementwithchildren::after{
+    content: '-';
+    font-size: 30px;
+    transition: .3s;
+    float: right;
+    position: relative;
+    padding-right: 20px;
+}
+
+#getstartbtn{
+    background-color: #003399;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    margin: 10px 30px 0px 30px;
+    justify-content: center;
+ 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+}
+
+.accordion{
+    display: none;
+}
+
+
+/* styling for Desktop view starts here*/
+.nav{
+    width: 100%;
+    display: flex;
+    border-bottom: 1px solid rgb(236, 235, 235);
+    position: absolute;
+    background-color: #ffff;
+    z-index: 200; 
+}
+.nav .logo{
+    margin: 20px 10px;
+   
+}
+.nav ul{
+    display: flex;
+    margin: 20px 15px;
+}
+ ul li{
+    display: block;
+    margin: 7px 10px 10px 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    color:#75849a;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    left: 0;
+    
+}
+.speech{
+    position: relative;
+    background-color:#ffff;
+    rotate: 45deg;
+    height: 30px;
+    width: 30px;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+ .subparent{
+    display: none;
+ 
+}
+.nav ul li:hover .subparent ul{
+    display: block;
+    margin: 10px;
+
+}
+.nav ul li:hover .subparent ul li{
+    width: 150;
+    padding: 5px;
+}
+.nav ul li a:hover{
+    color: #003399;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.nav ul li:hover .subparent{
+    display: block;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 0 5px #ccc;
+    transition: all 0.4 ease-in;
+    text-align: left;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+} 
+
+.subparent ul li{
+    width: 150;
+    padding: 5px;
+}
+.subparent ul li:hover{
+    transition: all 0.3 ease-in;
+}
+.nav ul li a{
+    color:#75849a;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+.start-btn{
+    background-color: #003399; 
+    padding: 10px 20px 10px 20px;
+    font-size: 15px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    color:white;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+}
+.right-web-navbar{
+    margin-left:20px ;
+    position:absolute;
+    right: 50px;
+    top: 35px; 
+    cursor: pointer;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#75849a; ;
+    float: right;
+    line-height: 80px;
+    margin-left: 80px;
+    cursor: pointer;
+    display: block;
+  }
+
+
+@media  (max-width: 768px) {
+
+    .nav{
+        display: none;
+
+    }
+    .accordion{
+        display: block;
+    }
+
+}
+
+
+/* HEADER CSS ENDS */
+
+.container{
+    height: calc(100vh- 800px);
+}
+.content{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: radial-gradient(ellipse at top left, hsla(217,100%,50%,0.3),transparent 70%);
+}
+input, select {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid #DDDDDD;
+  }
+   
+  input:focus, select:focus {
+    box-shadow: 0 0 3px #7098e9;
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+  }
+.text{
+    flex-wrap: block;
+    font-size: 35px;
+    padding: 20px;
+    margin: 0px 20px 20px 20px;
+    width: 400px;
+    margin-top: 100px;
+    line-height: 55px;
+    color: #003399;
+    font-weight: 700;
+}
+.user-input{
+    display: block;
+    flex-wrap: wrap;
+    font-size: 35px;
+    padding: 15px;
+    margin: 20px;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 0 0 5px #ccc;
+    margin-top: 120px;
+    height: auto;
+}
+.user-input .input-group .form-control{
+    width: 100%;
+    padding: 7px;
+    border: 0.5 solid #75849a;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}
+.user-input .input-group .form-control input, select{
+ 
+    width: 100%;
+    padding: auto;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 42px;
+}
+
+ .title{
+  border-top: 3px solid #003399;
+  width: 120px;
+  border-radius: 2px;
+  font-size: 16px;
+  color:#333333;
+  background-color: #fbfcfe;
+  padding: 15px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  text-align: center;
+  }
+  .terms{
+    display: inline;
+    color: black;
+  }
+.terms p{
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    color: #75849a;    
+}
+.terms a{
+    text-decoration: none;
+}
+#btn-submit{
+    background-color:  #003399;
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+#btn-submit:hover{
+    background-color: #0f4ecc;
+}
+.copy{
+    padding: 20px;
+    font-size: 14px;
+}
+.copy p{    
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #75849a;
+    text-align: center;
+
+}
+.social-media{
+    color: #fbfcfe;
+    background-color: #003399;
+    padding: 10px 0px;
+    font-size: 30px;
+
+}
+.social-media a{
+    text-decoration: none;
+    background-color: #003399;
+    color: #fbfcfe;
+}
+.notification-mother{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin:auto;
+    display: none;
+    background-color: rgba(177, 243, 177, 0.2);
+    height: 40px;
+    width: 90%;
+    border-radius: 5px;
+    transition: ease-in-out 0.3;
+}
+.notification{
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+@media (max-width: 768px) {
+    .container{
+        justify-content: center;
+        position: relative;
+       
+    }
+    .content{
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+
+    
+    }
+    .text{
+      
+        align-items: center;
+        font-size: 28px;
+        flex-wrap: wrap;
+        padding: 10px;
+        margin:70px 20px 20px 30px;
+        justify-content: center;
+        line-height: 45px;
+        width: 300px;
+        
+    }
+  
+    .user-input{
+        font-size: 24px;
+        padding: 10px;
+        margin: 20px;
+        justify-content: center;
+        position: relative;
+        top: 0px;
+        width: auto;
+        height: 100%;
+    }
+
+
+    .user-input input, select{
+        padding: 5px;
+    }
+    .title{
+        color: #003399;
+    }
+    .text{
+        margin-bottom: 70px;
+    }
+}
+label{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333333;
+}
+
+
+/************FOOTER SECTION ****************/
+
+.footer-container{
+    background-color:  #003399;
+    list-style: none;   
+}
+.footer-content{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+    padding: 30px;
+}
+.footer-content .store{
+    margin-right: 10px;
+    color:  #75849a;
+    font-size: 16px;
+    margin-top: 10px;
+    flex-basis: 250px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+.footer-container .footer-content ul{
+    margin-bottom: 6px;
+  
+}
+.footer-container .footer-content ul li{
+    width: auto;
+    list-style: none;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+   
+}
+.footer-container .footer-content ul li a{
+    color: white;
+    font-size: 14px;
+}
+.store .text-footer{
+    line-height: 24px;
+}
+
+/* RESPONSIVENESS FOR MOBILE */
+
+@media (max-width: 768px)  {
+    .footer-content{
+        display: block;
+       
+    }
+    .footer-container .footer-content ul{
+        margin-bottom: 15px;
+      
+    }
+    .footer-container .footer-content ul li{
+        width: auto;
+        padding: 4px 0px;
+        font-size: 16px;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        margin: 5px;
+       
+    }
+   
+}
+
