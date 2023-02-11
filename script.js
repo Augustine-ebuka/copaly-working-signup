@@ -52,7 +52,7 @@ const sendData = () => {
         redirect: 'follow'
       };
       //send post request to the API route
-    url = process.env.URL
+    
     const result = await fetch(" https://test.api.copaly.com/api/v1/auth/register", requestOptions)
     if (!result.ok) {
         notMother.style.display = "block"
