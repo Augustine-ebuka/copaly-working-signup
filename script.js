@@ -64,6 +64,7 @@ const sendData = () => {
       //send post request to the API route
     const result = await fetch(" https://test.api.copaly.com/api/v1/auth/register", requestOptions)
     if (!result.ok) {
+        scrollEffect()
         notMother.style.display = "block"
         notMother.style.background = "#EF8D9C"
         notification.style.color = "white"
