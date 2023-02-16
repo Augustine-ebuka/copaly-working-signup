@@ -31,7 +31,15 @@ for (var i = 0; i < content.length; i++) {
 const sendData = () => {
   
   SubmitformData.addEventListener('submit', async function (e) {
-      e.preventDefault();
+    e.preventDefault();
+    const scrollEffect = () => {
+      window.scrollTo({
+        top: 1,
+        left: 100,
+        behavior: 'smooth',
+      })
+    }
+    // scrollEffect()
       var myHeaders = new Headers();
       myHeaders.append("Accept", "application/json");
       
@@ -50,9 +58,10 @@ const sendData = () => {
         headers: myHeaders,
         body: formdata,
         redirect: 'follow'
-      };
+    };
+    //function that help screen to scroll to the top
+     
       //send post request to the API route
-    
     const result = await fetch(" https://test.api.copaly.com/api/v1/auth/register", requestOptions)
     if (!result.ok) {
         notMother.style.display = "block"
@@ -67,6 +76,8 @@ const sendData = () => {
         notMother.style.display = "block"
         notMother.style.background = "#B0DB7D"
       notification.innerHTML = "Registration successful"
+      scrollEffect()
+      
       console.log(result);
         setTimeout(function(){
         notMother.style.display = "none";
@@ -75,6 +86,7 @@ const sendData = () => {
           window.location.href = "download.html";
         }, 6000)
     }
+    
   })
 }
 sendData()
